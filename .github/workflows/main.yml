@@ -6,13 +6,6 @@ on:
       - main
   workflow_dispatch:
     inputs:
-      username:
-        required: true
-        type: string
-      password:
-        required: true
-        type: string
-
       package:
         description: 'Package name of debian package.'
         required: true
