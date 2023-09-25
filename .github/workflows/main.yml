@@ -75,7 +75,7 @@ jobs:
           package: samplescript
           package_root: .debpkg
           maintainer: your_name
-          version: $(echo $GITHUB_REF | cut -d '/' -f 3 | cut -c 2-)
+          version: ${{ steps.extract_version_number.outputs.version }}
           arch: 'amd64'
           depends: 'libc6 (>= 2.2.1), git'
           desc: 'this is sample package.'
