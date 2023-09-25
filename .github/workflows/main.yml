@@ -12,6 +12,43 @@ on:
       password:
         required: true
         type: string
+
+      package:
+        description: 'Package name of debian package.'
+        required: true
+      package_root:
+        description: 'Directory of release files.'
+        required: true
+      maintainer:
+        description: 'Package maintainer name.'
+        required: true
+      version:
+        description: 'Package version.'
+        required: true
+      installed_size:
+        description: 'Package installed size. GitHub Actions set summarized byte size of `package_root` directory when this parameter is empty.'
+        default: ''
+        required: false
+      depends:
+        description: 'Package dependencies.'
+        default: 'none'
+        required: false
+      arch:
+        description: 'Package architecture.'
+        default: 'amd64'
+        required: false
+      desc:
+        description: 'Package description.'
+        default: ''
+        required: false
+      compress_type:
+        description: >
+          Set the compression type used when building.
+          Allowed types gzip, xz, zstd, none.
+          Default is gzip.
+        default: 'gzip'
+        required: false
+
         
 jobs:
   build:
