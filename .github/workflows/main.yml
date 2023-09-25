@@ -81,5 +81,8 @@ jobs:
           git config user.name shaposhnikoff
           git config user.email max@shaposhnikoff.info
           git add .
-          git commit -m ${{ steps.extract_version_number.outputs.version }}
-          git push origin main
+      - name: commit changes
+        run: |
+          chmod +x ./commit.sh
+          ./commit.sh
+          
