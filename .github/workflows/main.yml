@@ -3,7 +3,7 @@ name: build
 on:
   push:
     branches:
-      - main
+      - 'v*.*.*'
   workflow_dispatch:
     inputs:
       package:
@@ -66,7 +66,7 @@ jobs:
           package: samplescript
           package_root: .debpkg
           maintainer: your_name
-          version: v1.2.3
+          version: ${{ github.ref }} # refs/tags/v*.*.*
           arch: 'amd64'
           depends: 'libc6 (>= 2.2.1), git'
           desc: 'this is sample package.'
