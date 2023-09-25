@@ -54,7 +54,7 @@ jobs:
         run: |
           git config user.name shaposhnikoff
           git config user.email max@shaposhnikoff.info
-          git add .
+          git add *.deb
           git commit -m "latest"
           git push origin main
           
