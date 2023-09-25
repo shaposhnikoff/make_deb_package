@@ -1,7 +1,0 @@
-Package: samplescript
-Version: 1.0.0
-Installed-Size: 32
-Architecture: amd64
-Maintainer: your_name
-Depends: libc6 (>= 2.2.1), git
-Description: this is sample package.
