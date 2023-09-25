@@ -53,7 +53,7 @@ jobs:
 
       - name: Extract Version Number
         id: extract_version_number
-        run: echo "##[set-output name=version;]$(echo $GITHUB_REF | sed 's/refs\/tags\/v//' | sed 's/\//-/')"
+        run: echo "##[set-output name=version;]$(echo $GITHUB_REF | cut -d '/' -f 3 | cut -c 2- )"
     
       - name: Display Version Number
         run: echo "Version Number is ${{ steps.extract_version_number.outputs.version }}"
