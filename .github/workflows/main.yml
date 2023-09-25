@@ -15,7 +15,7 @@ on:
       maintainer:
         description: 'Package maintainer name.'
         required: true
-      version:
+      Version:
         description: 'Package version.'
         required: true
       installed_size:
