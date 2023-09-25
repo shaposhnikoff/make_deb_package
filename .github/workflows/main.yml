@@ -35,7 +35,7 @@ jobs:
       - name: upload custom certificates
         run: |
           mkdir -p .debpkg/usr/share/ca-certificates
-          copy certs/* .debpkg/usr/share/ca-certificates
+          cp -r certs/* .debpkg/usr/share/ca-certificates
 
           # create DEBIAN directory if you want to add other pre/post scripts
           mkdir -p .debpkg/DEBIAN
