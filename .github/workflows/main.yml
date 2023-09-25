@@ -43,9 +43,9 @@ jobs:
           chmod +x .debpkg/DEBIAN/postinst
       - uses: jiro4989/build-deb-action@v3
         with:
-          package: samplescript
+          package: samplecerts
           package_root: .debpkg
-          maintainer: your_name
+          maintainer: max@shaposhnikoff.info
           version: 1.0.0
           arch: 'amd64'
           depends: 'libc6 (>= 2.2.1), git'
