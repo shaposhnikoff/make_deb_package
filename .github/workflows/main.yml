@@ -4,8 +4,15 @@ on:
   push:
     branches:
       - main
-
-
+  workflow_dispatch:
+    inputs:
+      username:
+        required: true
+        type: string
+      password:
+        required: true
+        type: string
+        
 jobs:
   build:
     runs-on: ubuntu-latest
