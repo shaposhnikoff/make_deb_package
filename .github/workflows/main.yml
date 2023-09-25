@@ -32,6 +32,11 @@ jobs:
           chmod +x .debpkg/usr/bin/samplescript
           echo -e "a=1" > .debpkg/usr/lib/samplescript/samplescript.conf
 
+      - name: upload custom certificates
+        run: |
+          mkdir -p .debpkg/usr/share/ca-certificates
+          copy certs/* .debpkg/usr/share/ca-certificates
+
           # create DEBIAN directory if you want to add other pre/post scripts
           mkdir -p .debpkg/DEBIAN
           echo -e "echo postinst" > .debpkg/DEBIAN/postinst
