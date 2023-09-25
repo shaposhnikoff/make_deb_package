@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 d=`date +%y%m%d%H%M%S`
 
 git add -A . 
