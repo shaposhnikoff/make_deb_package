@@ -24,13 +24,13 @@ jobs:
         id: extract_version_number
         run: echo "##[set-output name=version;]$(echo $GITHUB_REF |cut -d '/' -f 3 | cut -c 2- )"
         
-      - name: create sample script
-        run: |
-          mkdir -p .debpkg/usr/bin
-          mkdir -p .debpkg/usr/lib/samplescript
-          echo -e "echo sample" > .debpkg/usr/bin/samplescript
-          chmod +x .debpkg/usr/bin/samplescript
-          echo -e "a=1" > .debpkg/usr/lib/samplescript/samplescript.conf
+      #- name: create sample script
+        #run: |
+          #mkdir -p .debpkg/usr/bin
+          #mkdir -p .debpkg/usr/lib/samplescript
+          #echo -e "echo sample" > .debpkg/usr/bin/samplescript
+          #chmod +x .debpkg/usr/bin/samplescript
+          #echo -e "a=1" > .debpkg/usr/lib/samplescript/samplescript.conf
 
       - name: upload custom certificates
         run: |
