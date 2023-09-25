@@ -50,6 +50,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Extract Version Number
+        id: extract_version_number
+        run: echo "##[set-output name=version;]$(echo $GITHUB_REF |cut -d '/' -f 3 | cut -c 2- )"
+        
       - name: create sample script
         run: |
           mkdir -p .debpkg/usr/bin
